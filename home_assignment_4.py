@@ -44,20 +44,20 @@ def city_rating(cities_dict):
 
     count = 0
     max = 0
-    CityMax = ""
+    city_max = ""
     sum = 0
     for key,value in cities_dict.items():
         count += 1
         if value > max:
             max = value
-            CityMax = key
+            city_max = key
         sum += value
 
     average = 0
     if not count == 0:
         average = sum/count
 
-    return (sum,average,CityMax)
+    return (sum,average,city_max)
 
 
 #                SETS                 #
@@ -69,11 +69,11 @@ def city_rating(cities_dict):
 
 def not_busy_children(groups_dict):
 
-    Set = {}
+    set_groups = {}
     for value in groups_dict.values():
-         Set = set(value).symmetric_difference(Set)
+         set_groups = set(value).symmetric_difference(set_groups)
 
-    return Set
+    return set_groups
 
 # ===========================================================================
 # КОД НИЖЕ МЕНЯТЬ НЕЛЬЗЯ
