@@ -120,3 +120,5 @@ if __name__ == '__main__':
     test_get_sublist()
     test_city_rating()
     test_not_busy_children()
+
+print ('Hello from Home assigent 4!')

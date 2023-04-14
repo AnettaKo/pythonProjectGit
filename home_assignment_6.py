@@ -10,15 +10,18 @@
 
 #from home_assignment_4.py import get_sublist as qwer
 
-def get_sublist_ha4(my_list, item):
+# def get_sublist_ha4(my_list, item):
+#
+#     for element in my_list:
+#         if element == item:
+#             index = my_list.index(element)
+#             return my_list[:index]
+#             break
+#
+#     return "Error"
 
-    for element in my_list:
-        if element == item:
-            index = my_list.index(element)
-            return my_list[:index]
-            break
-
-    return "Error"
+from home_assignment_4 import get_sublist as get_sublist_ha4
+#import home_assignment_4
 
 def get_sublist(file_name):
 
@@ -49,23 +52,25 @@ def get_sublist(file_name):
 # 2 - среднее арифметичское всех очков (сумма, деленная на количество элементов)
 # 3 - название города, у которого максимальное количество очков
 
-def city_rating_ha4(cities_dict):
-    count = 0
-    max = 0
-    сity_max = ""
-    sum = 0
-    for key, value in cities_dict.items():
-        count += 1
-        if value > max:
-            max = value
-            сity_max = key
-        sum += value
+# def city_rating_ha4(cities_dict):
+#     count = 0
+#     max = 0
+#     сity_max = ""
+#     sum = 0
+#     for key, value in cities_dict.items():
+#         count += 1
+#         if value > max:
+#             max = value
+#             сity_max = key
+#         sum += value
+#
+#     average = 0
+#     if not count == 0:
+#         average = sum / count
+#
+#     return (sum, average, сity_max)
 
-    average = 0
-    if not count == 0:
-        average = sum / count
-
-    return (sum, average, сity_max)
+from home_assignment_4 import city_rating as city_rating_ha4
 
 def city_rating(file_name):
     file_input = open(file_name,"r")
@@ -96,13 +101,15 @@ def city_rating(file_name):
 # (то есть они не пересекаются с детьми из других кружков).
 # Результат запишите в файл task4_output.txt, где каждое имя из вычисленного множества - на новой строке
 
-def not_busy_children_ha4(groups_dict):
+# def not_busy_children_ha4(groups_dict):
+#
+#     set_groups = {}
+#     for value in groups_dict.values():
+#          set_groups = set(value).symmetric_difference(set_groups)
+#
+#     return set_groups
 
-    set_groups = {}
-    for value in groups_dict.values():
-         set_groups = set(value).symmetric_difference(set_groups)
-
-    return set_groups
+from home_assignment_4 import not_busy_children as not_busy_children_ha4
 
 def not_busy_children(file_name):
     file_input = open(file_name, "r")
